@@ -14,3 +14,10 @@ let txtHandler = function(e) {
     let obj = JSON.parse(e.target.responseText);    // objectify response
                                                     // and use it
 }
+
+//Click button
+let showStarter = function () {
+    $("button").addEventListener("click", getNewContent);
+}
+
+window.addEventListener("load", showStarter);

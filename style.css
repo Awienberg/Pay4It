@@ -5,7 +5,6 @@
   }
 
 body {
-    background-color:  #202020;
     font-family: 'Roboto', sans-serif;
     height: 100%;
     width : 100%;
@@ -34,7 +33,7 @@ body {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 25px;
+    font-size: 16px;
     color: #fff;
 }
 
@@ -44,31 +43,78 @@ body {
 }
 
 #top {
-    background-color: #000;
+    background-color: #fff;
     height: 200px;
 }
 
 #mid {
-    background-color: rgb(87, 87, 87);
-    height: 800px;  
+    background-color: #fff;
+    height: 600px;  
+}
+
+#bestilling {
+    background-color: #202020;
+    height: 100px;
+    padding: 20px;
+}
+
+#bestilling h2 {
+  text-align: left;
+  font-size: 30px;
 }
 
 #bot {
-    background-color: #ccc;
-    height: 800px;  
+    background-color: #fff;
+    height: 300px;  
 }
 
-#kategorier {
+button {
+  border: none;
+  color: #fff;
+  padding: 5px;
+  margin: 5px;
+  width: 49%;
+  text-align: center;
+  text-decoration: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+#betal {
+  background-color: #4CAF50;
+  float: right;
+}
+
+#annuller {
+  background-color: red;
+  float: left;
+}
+
+#button {
+  background-color: #fff;
+}
+
+.kategorier {
     border-left: 1px solid #202020;
-    width: 16.66%;
+    width: 20%;
     height: 100%;
     background-color: #000;
     float: left;
     cursor: pointer;
 }
 
+.solarie {
+  border: 1px solid #202020;
+  width: 25%;
+  height: 50%;
+  background-color: #000;
+  float: left;
+  cursor: pointer;
+}
+
 footer {
     text-align: center;
     background-color: #303030;
     padding: 20px;
+    clear: both;
 }
