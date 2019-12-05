@@ -5,27 +5,26 @@
   }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     height: 100%;
     width : 100%;
-    margin: 0px;
   }
   
   header {
-    text-align: left;
-    padding: 20px;
+    text-align: center;
+    height: 400px;
     background: #303030;
+    background-image: url("images/background.png"); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 50px;
   }
-  
-  .wrapper {
-      position: relative;
-      clear: both;
-    }
     
   h1 {
       font-size: 30px;
+      padding: 50px;
       color: #fff;
-      margin-left: 40px;
   }
 
   h2 {
@@ -33,87 +32,103 @@ body {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 16px;
-    color: #fff;
-}
-
-  h3 {
     font-size: 20px;
-    color: #fff;
+    color: #002c44;
 }
 
-#top {
-    background-color: #fff;
-    height: 200px;
+#sidebar {
+    width: 25%;
+    height: 100%;
+    float: left;
+    margin-bottom: 50px;
+    clear: both;
 }
 
 #mid {
-    background-color: #fff;
-    height: 600px;  
+  width: 75%;
+  height: 100%;
+  float: left;
 }
 
-#bestilling {
-    background-color: #202020;
+
+#bestil {
+    background-color: #002c44;
     height: 100px;
     padding: 20px;
+    clear: both;
 }
 
-#bestilling h2 {
+#bestil h2 {
+  color: #fff;
   text-align: left;
   font-size: 30px;
 }
 
 #bot {
     background-color: #fff;
-    height: 300px;  
+    height: 300px;
+    clear: both;  
 }
 
 button {
-  border: none;
+  font-family: 'Quicksand', sans-serif;
   color: #fff;
-  padding: 5px;
-  width: 50%;
   text-align: center;
   text-decoration: none;
   font-size: 30px;
+  border-radius: 5px;
+  border: none;
+  padding: 5px;
+  width: 49%;
   cursor: pointer;
+  margin: 5px;
 }
 
 #betal {
-  background-color: #4CAF50;
+  border: 1px solid  #002c44;
+  background-color:  #002c44;
   float: right;
 }
 
 #annuller {
-  background-color: red;
-  float: left;
-}
-
-#button {
+  border: 1px solid  #002c44;
   background-color: #fff;
+  float: left;
+  color:  #002c44;
 }
 
 .kategorier {
-    border-left: 1px solid #202020;
-    width: 20%;
-    height: 100%;
-    background-color: #000;
-    float: left;
+    border-radius: 5px;
+    border: 1px solid #002c44;
+    width: 320px;
+    height: 250px;
+    background-color: #fff;
     cursor: pointer;
+    float: left;
+    margin: 10px;
+  }
+
+#kategori2 {
+  width: 340px;
+  height: 250px;
+  background-color: #002c44;
+}
+
+#kategori2 h2 {
+  color: #fff;
+  font-size: 25px;
 }
 
 .solarie {
-  border: 1px solid #202020;
-  width: 25%;
-  height: 50%;
-  background-color: #000;
-  float: left;
+  border-radius: 5px;
+  background-color:  #002c44;
+  width: 320px;
+  height: 250px;
   cursor: pointer;
+  float: left;
+  margin: 10px;
 }
 
-footer {
-    text-align: center;
-    background-color: #303030;
-    padding: 20px;
-    clear: both;
+.solarie h2{
+  color: #fff;
 }
