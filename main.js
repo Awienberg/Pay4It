@@ -6,7 +6,7 @@ import {Ajax} from "./modules/Ajax.js";
 let getNewContent = function() {
     let req = Object.create(Ajax);
     req.init();
-    req.getFile("./modules/example2.json", txtHandler);
+    req.getFile("", txtHandler);
 }
 
 //ajax load event puts received text onto the dom into the dom
@@ -17,7 +17,12 @@ let txtHandler = function(e) {
 
 //Click button
 let showStarter = function () {
-    $("button").addEventListener("click", getNewContent);
+    $("solarie1").addEventListener("click", getNewContent);
 }
 
 window.addEventListener("load", showStarter);
+
+//When .kategori is clicked, toggle css .large
+document.getElementsByClassName("kategori")[1].addEventListener("click", function () {
+    this.classList.toggle("large")
+})

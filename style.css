@@ -12,18 +12,20 @@ body {
   
   header {
     text-align: center;
-    height: 400px;
-    background: #303030;
+    height: 500px;
+    background: #002c44;
     background-image: url("images/background.png"); 
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    margin-bottom: 50px;
+    outline: 2px solid #fff;
+    outline-offset: -30px;
+    margin-bottom: 30px;
   }
-    
+
   h1 {
       font-size: 30px;
-      padding: 50px;
+      padding: 100px;
       color: #fff;
   }
 
@@ -33,14 +35,13 @@ body {
     top: 50%;
     transform: translateY(-50%);
     font-size: 20px;
-    color: #002c44;
 }
 
 #sidebar {
     width: 25%;
     height: 100%;
     float: left;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     clear: both;
 }
 
@@ -48,6 +49,7 @@ body {
   width: 75%;
   height: 100%;
   float: left;
+  
 }
 
 
@@ -65,23 +67,21 @@ body {
 }
 
 #bot {
-    background-color: #fff;
     height: 300px;
     clear: both;  
 }
 
 button {
+  width: 49%;
   font-family: 'Quicksand', sans-serif;
   color: #fff;
   text-align: center;
-  text-decoration: none;
   font-size: 30px;
   border-radius: 5px;
-  border: none;
   padding: 5px;
-  width: 49%;
-  cursor: pointer;
   margin: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
 }
 
 #betal {
@@ -97,7 +97,7 @@ button {
   color:  #002c44;
 }
 
-.kategorier {
+.kategori {
     border-radius: 5px;
     border: 1px solid #002c44;
     width: 320px;
@@ -108,27 +108,27 @@ button {
     margin: 10px;
   }
 
-#kategori2 {
+.kategori:hover {
   width: 340px;
   height: 250px;
   background-color: #002c44;
+  color: #fff;
 }
 
-#kategori2 h2 {
+.large {
+  width: 340px;
+  height: 250px;
+  background-color: #002c44;
   color: #fff;
-  font-size: 25px;
 }
 
 .solarie {
   border-radius: 5px;
   background-color:  #002c44;
-  width: 340px;
+  width: 350px;
   height: 250px;
   cursor: pointer;
   float: left;
   margin: 10px;
-}
-
-.solarie h2{
   color: #fff;
 }
