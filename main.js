@@ -23,6 +23,12 @@ let showStarter = function () {
 window.addEventListener("load", showStarter);
 
 //When .kategori is clicked, toggle css .large
-document.getElementsByClassName("kategori")[1].addEventListener("click", function () {
-    this.classList.toggle("large")
-})
+let arr = document.getElementsByClassName("kategori");
+for (let elm of arr) {
+    elm.addEventListener("click", function (e) {
+        elm.classList.toggle("large");
+    });
+if (elm.classList.contains('large')) {
+    elm.classList.remove('large');
+} 
+};

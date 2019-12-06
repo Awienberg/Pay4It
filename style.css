@@ -100,24 +100,17 @@ button {
 .kategori {
     border-radius: 5px;
     border: 1px solid #002c44;
-    width: 320px;
-    height: 250px;
+    width: 300px;
+    height: 230px;
     background-color: #fff;
     cursor: pointer;
     float: left;
     margin: 10px;
   }
 
-.kategori:hover {
-  width: 340px;
-  height: 250px;
-  background-color: #002c44;
-  color: #fff;
-}
-
 .large {
-  width: 340px;
-  height: 250px;
+  width: 330px;
+  height: 230px;
   background-color: #002c44;
   color: #fff;
 }
@@ -125,8 +118,8 @@ button {
 .solarie {
   border-radius: 5px;
   background-color:  #002c44;
-  width: 350px;
-  height: 250px;
+  width: 300px;
+  height: 230px;
   cursor: pointer;
   float: left;
   margin: 10px;
