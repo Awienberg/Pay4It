@@ -162,7 +162,6 @@ button {
   cursor: pointer;
   margin-bottom: 10px;
   display: inline-block;
-
 }
 
 #betal {
@@ -221,6 +220,12 @@ footer {
 p {
   padding-top: 50px;
   font-size: 20px;
+}
+
+#tilføj {
+    border: none;
+    background-color: #fff;
+    color:  #003A5D;
 }
 
 /* The Close Button */
