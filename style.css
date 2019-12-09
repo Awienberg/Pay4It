@@ -13,19 +13,18 @@ body {
   header {
     text-align: center;
     height: 500px;
-    background: #002c44;
+    background: #003A5D;
     background-image: url("images/background.png"); 
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     outline: 2px solid #fff;
     outline-offset: -30px;
-    margin-bottom: 30px;
   }
 
   h1 {
-      font-size: 30px;
-      padding: 100px;
+      font-size: 70px;
+      padding: 70px;
       color: #fff;
   }
 
@@ -37,91 +36,137 @@ body {
     font-size: 20px;
 }
 
-#sidebar {
+  h3 {
+    font-size: 20px;
+    color: #fff;
+    padding: 50px;
+  }
+
+.wrapper {
+  margin-top: 30px;
+}
+
+.sidebar {
     width: 25%;
     height: 100%;
     float: left;
     margin-bottom: 30px;
-    clear: both;
 }
 
-#mid {
+.mid {
   width: 75%;
   height: 100%;
   float: left;
-  
+  margin-bottom: 30px;
 }
 
-
-#bestil {
-    background-color: #002c44;
-    height: 100px;
-    padding: 20px;
-    clear: both;
+.kategorier {
+  margin-left: 20px;
 }
 
-#bestil h2 {
+.kategori {
+    display: inline-block;
+    border-radius: 5px;
+    border: 1px solid #003A5D;
+    width: 80%;
+    height: 230px;
+    background-color: #fff;
+    cursor: pointer;
+    margin: 10px;
+  }
+
+.large {
+  width: 90%;
+}
+
+.solarier {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.solarie {
+  display: inline-block;
+  border-radius: 5px;
+  background-color:  #003A5D;
+  width: 30%;
+  height: 230px;
+  cursor: pointer;
+  margin: 10px;
+  color: #fff;
+}
+
+.before {
+  background-color: #003A5D;
+  height: 100px;
+  padding: 20px;
+  margin: 0 auto;
+  clear: both;
+  text-align: center;
+}
+
+#bestilling h2 {
   color: #fff;
   text-align: left;
   font-size: 30px;
+  float: left;
+  margin-top: 30px;
 }
 
-#bot {
-    height: 300px;
-    clear: both;  
+#total h2 {
+  color: #fff;
+  text-align: left;
+  font-size: 30px;
+  float: right;
+  margin-top: 30px;
+  margin-right: 200px;
+}
+
+.bot {
+  height: 300px;
+  margin: 0 auto;
+  text-align: center;
+  clear: both;
+}
+
+#kurv {
+  width: 90%;
+  height: 20%;
+  border: 1px dotted #003A5D;
+  color: #003A5D;
+  border-radius: 120px;
+  display: inline-block;
+  background-color: #fff;
+  margin-top: 100px;
+
 }
 
 button {
-  width: 49%;
+  width: 45%;
   font-family: 'Quicksand', sans-serif;
   color: #fff;
   text-align: center;
   font-size: 30px;
   border-radius: 5px;
   padding: 5px;
-  margin: 5px;
+  margin: 10px;
   cursor: pointer;
   margin-bottom: 10px;
+  display: inline-block;
+
 }
 
 #betal {
-  border: 1px solid  #002c44;
-  background-color:  #002c44;
-  float: right;
+  border: 1px solid  #003A5D;
+  background-color:  #003A5D;
 }
 
 #annuller {
-  border: 1px solid  #002c44;
+  border: 1px solid  #003A5D;
   background-color: #fff;
-  float: left;
-  color:  #002c44;
+  color:  #003A5D;
 }
 
-.kategori {
-    border-radius: 5px;
-    border: 1px solid #002c44;
-    width: 300px;
-    height: 230px;
-    background-color: #fff;
-    cursor: pointer;
-    float: left;
-    margin: 10px;
-  }
-
-.large {
-  width: 330px;
-  height: 230px;
-  background-color: #002c44;
-  color: #fff;
-}
-
-.solarie {
-  border-radius: 5px;
-  background-color:  #002c44;
-  width: 300px;
-  height: 230px;
-  cursor: pointer;
-  float: left;
-  margin: 10px;
-  color: #fff;
+footer {
+  margin: 0 auto;
+  text-align: center;
 }
