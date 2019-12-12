@@ -22,7 +22,7 @@ let Ajax = {
                 callback(ev);
             });
             this.ajaxobj.open("GET", filename);
-            this.ajaxobj.send("");
+            this.ajaxobj.send("https://consolwebapi.pay4it.dk/api/Devices/Detail?deviceID=562");
         } catch(err) {
             window.alert(err.message + 'WTF');
         } 

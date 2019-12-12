@@ -18,8 +18,6 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    outline: 2px solid #fff;
-    outline-offset: -30px;
   }
 
   h1 {
@@ -92,11 +90,7 @@ body {
   border-radius: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background-color:  #003A5D;
-  background-image: url("images/kabine.jpg"); 
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 25%;
+  width: 40%;
   height: 230px;
   cursor: pointer;
   margin-left: 20px;
@@ -195,7 +189,6 @@ footer {
   background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
 }
 
-/* Modal Content */
 .modal-content {
   background-color: #003A5D;
   border-radius: 5px;
@@ -228,7 +221,6 @@ p {
     color:  #003A5D;
 }
 
-/* The Close Button */
 .close {
   color: #fff;
   float: right;
