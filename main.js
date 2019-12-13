@@ -9,115 +9,75 @@ xhr.setRequestHeader("Authorization", "Basic cmlra2VfY2FybHNzb25AbGl2ZS5kazoJIDR
 xhr.setRequestHeader("Cache-Control", "no-cache");
 
 xhr.send()
+var booths;
+var shelves;
 
 xhr.addEventListener("load", function(){
   let json = xhr.responseText;
   json = JSON.parse(json)
   console.log(json);
 
-  let booths = json.Booths;
-  let shelves = json.Shelves;
+  booths = json.Booths;
+  shelves = json.Shelves;
 
 //EACH BOOTH
 for (let booth of booths) {
-  console.log(booth.Description);
-  console.log(booth);
+//  console.log(booth.Description);
+//  console.log(booth);
+
 }
 
 //EACH SHELVE
 for (let shelve of shelves) {
-  console.log(shelve.Description);
-  console.log(shelve);
+//  console.log(shelve.Description);
+//  console.log(shelve);
 }
 });
 
-/*
-//Event handler for fortune button - tests responseText
-let getNewContent = function() {
-  let req = Object.create(Ajax);
-  req.init();
-  req.getFile("https://consolwebapi.pay4it.dk/api/Devices/Detail?deviceID=562", txtHandler); //callback
-}
-*/
-
 //ajax load event puts received text onto the dom into the dom
 let txtHandler = function(e) {
-  let obj = JSON.parse(e.xhr.responseText);    // objectify response
+  //  let obj = JSON.parse(e.xhr.responseText);    // objectify response
                                                   // and use it
+    let s = e.target.id;
+    console.log('a: ' + s);
+    s = s.substring(s.length - 1) - 1;    // få nr fra id lavet til index 
+    console.log('b: ' + s);
+    let elm = booths[s];                  // find dette element 
+    let createProduct = document.createElement("div")
+    let p1 = document.createElement("p")
+    let id = document.createTextNode(`${elm.ID}`)
+    p1.appendChild(id);
 
-//loop that prints the data into table in HTML
-for (let i = 0; i < obj.length; i++) {
-let createProduct = document.createElement("div")
-  let p1 = document.createElement("p")
-  let id = document.createTextNode(`${obj[i].ID}`)
-  p1.appendChild(id);
+    let p2 = document.createElement("p")
+    let description = document.createTextNode(`${elm.Description}`)
+    p2.appendChild(description);
 
-  let p2 = document.createElement("p")
-  let description = document.createTextNode(`${obj[i].Description}`)
-  p2.appendChild(description);
+    let p3 = document.createElement("p")
+    let inUse = document.createTextNode(`${elm.IsInUse}`)
+    p3.appendChild(inUse);
 
-  let p3 = document.createElement("p")
-  let inUse = document.createTextNode(`${obj[i].IsInUse}`)
-  p3.appendChild(inUse);
+    let p4 = document.createElement("p")
+    let price = document.createTextNode(`${elm.Price}`)
+    p4.appendChild(price);
 
-  let p4 = document.createElement("p")
-  let price = document.createTextNode(`${obj[i].Price}`)
-  p4.appendChild(price);
-
-  createProduct.appendChild(p1);
-  createProduct.appendChild(p2);
-  createProduct.appendChild(p3);
-  createProduct.appendChild(p4);
-  document.getElementByClassName("content").appendChild(createProduct);
-  }                                            
+    createProduct.appendChild(p1);
+    createProduct.appendChild(p2);
+    createProduct.appendChild(p3);
+    createProduct.appendChild(p4);
+    document.getElementById("contentNML").appendChild(createProduct);
+    $(e.target.id).removeEventListener("click", txtHandler);
+                                              
 };                           
 
-/*
+
 //Click solarie1
 let showStarter = function () {
   $("solarie1").addEventListener("click", txtHandler);
+  $("solarie2").addEventListener("click", txtHandler);
+  $("solarie3").addEventListener("click", txtHandler);
 }
 
 window.addEventListener("load", showStarter);
-*/
-
-/*
-let createModal = function(modalContent, onAddToBasket, onClose) {
-  let modal = document.createElement('div');
-  modal.className = 'modal';
-    
-  let wrapper = document.createElement('div');
-  wrapper.className = 'modal-content';
-  modal.appendChild(wrapper)
-  
-  let close = document.createElement('span');
-  close.className = 'close';
-  close.appendChild(document.createTextNode('&times;'));
-  close.addEventListener('click', onClose)
-  wrapper.appendChild(close);
-  
-  let content = document.createElement('div');
-  content.className = 'content';
-  wrapper.appendChild(content);
-  
-  let paragraph = document.createElement('p');
-  paragraph.appendChild(document.createTextNode(modalContent))
-  content.appendChild(paragraph)
-  
-  let button = document.createElement('button');
-  button.addEventListener('click', onAddToBasket)
-  button.appendChild(document.createTextNode('Tilføj til kurv'));
-  wrapper.appendChild(button);
-
-};
-
-//popUp box
-let popUp = function () {
-  $("solarie1").addEventListener("click", createModal);
-}
-
-window.addEventListener("load", popUp);
-*/
 
 //When .kategori is clicked, toggle css .large
 let arr = document.getElementsByClassName("kategori");
