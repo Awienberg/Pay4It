@@ -34,6 +34,15 @@ for (let shelve of shelves) {
 }
 });
 
+/*
+//Event handler for fortune button - tests responseText
+let getNewContent = function() {
+  let req = Object.create(Ajax);
+  req.init();
+  req.getFile("https://consolwebapi.pay4it.dk/api/Devices/Detail?deviceID=562", txtHandler); //callback
+}
+*/
+
 //ajax load event puts received text onto the dom into the dom
 let txtHandler = function(e) {
   //  let obj = JSON.parse(e.xhr.responseText);    // objectify response
