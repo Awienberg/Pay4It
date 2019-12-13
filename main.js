@@ -34,17 +34,9 @@ for (let shelve of shelves) {
 }
 });
 
-/*
-//Event handler for fortune button - tests responseText
-let getNewContent = function() {
-  let req = Object.create(Ajax);
-  req.init();
-  req.getFile("https://consolwebapi.pay4it.dk/api/Devices/Detail?deviceID=562", txtHandler); //callback
-}
-*/
 
 //ajax load event puts received text onto the dom into the dom
-let txtHandler = function(e) {
+let dataHandler = function(e) {
   //  let obj = JSON.parse(e.xhr.responseText);    // objectify response
                                                   // and use it
     let s = e.target.id;
@@ -52,66 +44,79 @@ let txtHandler = function(e) {
     s = s.substring(s.length - 1) - 1;    // få nr fra id lavet til index 
     console.log('b: ' + s);
     let elm = booths[s];                  // find dette element 
+    
     let createProduct = document.createElement("div")
+    createProduct.setAttribute("id", "dataHolder");
     let p1 = document.createElement("p")
-    let id = document.createTextNode(`${elm.ID}`)
+    let id = document.createTextNode("ID: " + `${elm.ID}`)
     p1.appendChild(id);
 
     let p2 = document.createElement("p")
-    let description = document.createTextNode(`${elm.Description}`)
+    let description = document.createTextNode("Navn på kabine: " + `${elm.Description}`)
     p2.appendChild(description);
 
     let p3 = document.createElement("p")
-    let inUse = document.createTextNode(`${elm.IsInUse}`)
+    let inUse = document.createTextNode("Optaget: " + `${elm.IsInUse}`)
     p3.appendChild(inUse);
 
     let p4 = document.createElement("p")
-    let price = document.createTextNode(`${elm.Price}`)
+    let price = document.createTextNode("Pris pr. minut: " + `${elm.Price}`)
     p4.appendChild(price);
 
     createProduct.appendChild(p1);
     createProduct.appendChild(p2);
     createProduct.appendChild(p3);
     createProduct.appendChild(p4);
-    document.getElementById("contentNML").appendChild(createProduct);
-    $(e.target.id).removeEventListener("click", txtHandler);
-                                              
+    $("getData").appendChild(createProduct);
+    $(e.target.id).removeEventListener("click", dataHandler); //virker stadig ikke helt :(                                          
 };                           
 
 
 //Click solarie1
 let showStarter = function () {
-  $("solarie1").addEventListener("click", txtHandler);
-  $("solarie2").addEventListener("click", txtHandler);
-  $("solarie3").addEventListener("click", txtHandler);
+  $("solarie1").addEventListener("click", dataHandler);
+  $("solarie2").addEventListener("click", dataHandler);
+  $("solarie3").addEventListener("click", dataHandler);
+  $("solarie4").addEventListener("click", dataHandler);
 }
 
 window.addEventListener("load", showStarter);
 
+
 //When .kategori is clicked, toggle css .large
 let arr = document.getElementsByClassName("kategori");
 for (let elm of arr) {
-    elm.addEventListener("click", function (e) {
+    elm.addEventListener("click", function () {
         elm.classList.toggle("large");
     });
 if (elm.classList.contains('large')) {
-    elm.classList.remove('large');
-} 
+    elm.removeEventListener("click", function () {
+        elm.classList.remove("large");
+    });
+}
 };
 
-//Pop-up 
+//Pop-up box
 // Get the modal
 let modal = $("myModal");
 
 // Get the button that opens the modal
-let btn = $("solarie1");
+let btn1 = $("solarie1");
+let btn2 = $("solarie2");
+
 
 // Get the <span> element that closes the modal
 let span = document.getElementsByClassName("close")[0];
 
 // When the user clicks the button, open the modal 
-btn.onclick = function(event) {
-  if (event.target == btn) {
+btn1.onclick = function(event) {
+  if (event.target == btn1) {
+  modal.style.display = "block";
+  }
+}
+
+btn2.onclick = function(event) {
+  if (event.target == btn2) {
   modal.style.display = "block";
   }
 }

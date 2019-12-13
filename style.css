@@ -49,7 +49,6 @@ body {
     height: 100%;
     float: left;
     margin-bottom: 30px;
-    /*background-color: blue;*/
 }
 
 .mid {
@@ -174,12 +173,13 @@ footer {
   text-align: center;
 }
 
+/* Reference: https://www.w3schools.com/howto/howto_css_modals.asp */
 /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+  padding-top: 80px; /* Location of the box */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
@@ -190,12 +190,29 @@ footer {
 }
 
 .modal-content {
+  position: relative;
+  -webkit-animation-name: animate;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animate;
+  animation-duration: 0.4s;
   background-color: #003A5D;
   border-radius: 5px;
   margin: auto;
   padding: 20px;
-  width: 60%;
+  width: 50%;
   color: #003A5D;
+  text-align: center;
+}
+
+/* Add Animation */
+@-webkit-keyframes animate {
+  from {right:-300px; opacity:0} 
+  to {right:0; opacity:1}
+}
+
+@keyframes animate {
+  from {right:-300px; opacity:0}
+  to {right:0; opacity:1}
 }
 
 .content {
@@ -203,15 +220,25 @@ footer {
   border-radius: 5px;
   margin-top: 80px;
   margin-bottom: 40px;
-  width: 95%;
-  height: 500px;
-  text-align: center;
+  width: 90%;
+  height: 283px;
   background-color: #fff;
+  line-height: 2.5em;
+}
 
+.content img {
+  float: left;
+}
+
+#dataHolder {
+  padding-top: 60px;
+  padding-left: 20px;
+  float: left;
+  text-align: left;
+  font-size: 30px;
 }
 
 p {
-  padding-top: 50px;
   font-size: 20px;
 }
 
@@ -233,4 +260,10 @@ p {
 .close:focus {
   text-decoration: none;
   cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+  .modal-content {
+    width: 60%;
+  }
 }
