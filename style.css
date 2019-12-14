@@ -192,9 +192,9 @@ footer {
 .modal-content {
   position: relative;
   -webkit-animation-name: animate;
-  -webkit-animation-duration: 0.4s;
+  -webkit-animation-duration: 0.5s;
   animation-name: animate;
-  animation-duration: 0.4s;
+  animation-duration: 0.5s;
   background-color: #003A5D;
   border-radius: 5px;
   margin: auto;

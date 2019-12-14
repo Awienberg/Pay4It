@@ -87,28 +87,24 @@ window.addEventListener("load", showStarter);
 let arr = document.getElementsByClassName("kategori");
 for (let elm of arr) {
     elm.addEventListener("click", function () {
-        elm.classList.toggle("large");
-    });
-if (elm.classList.contains('large')) {
-    elm.removeEventListener("click", function () {
+      if (elm.classList.contains("large")) {
         elm.classList.remove("large");
+        console.log("remove");
+      } else {
+        elm.classList.add("large");
+        console.log("add")
+      }
     });
 }
-};
 
 //Pop-up box
-// Get the modal
 let modal = $("myModal");
 
-// Get the button that opens the modal
 let btn1 = $("solarie1");
 let btn2 = $("solarie2");
 
-
-// Get the <span> element that closes the modal
 let span = document.getElementsByClassName("close")[0];
 
-// When the user clicks the button, open the modal 
 btn1.onclick = function(event) {
   if (event.target == btn1) {
   modal.style.display = "block";
@@ -121,14 +117,12 @@ btn2.onclick = function(event) {
   }
 }
 
-// When the user clicks on <span> (x), close the modal
 span.onclick = function(event) {
   if (event.target == span) {
   modal.style.display = "none";
   }
 }
 
-// When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
